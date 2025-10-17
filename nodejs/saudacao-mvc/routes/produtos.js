@@ -1,12 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const siteController = require('../controllers/siteController');
 
+// Rota principal de produtos
+router.get('/', siteController.produtos);
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
- res.send('Nossos Produtos');
-});
+// Rota para camisetas
+router.get('/camisetas', siteController.camisetas);
 
 module.exports = router;
-
+  
 
