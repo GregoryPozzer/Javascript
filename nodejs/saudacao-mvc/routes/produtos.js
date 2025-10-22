@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const siteController = require('../controllers/siteController');
+const produtosController = require('../controllers/produtosController');
 
 // Rota principal de produtos
-router.get('/', siteController.produtos);
+router.get('/', produtosController.produtos);
 
 // Rota para camisetas
-router.get('/camisetas', siteController.camisetas);
+router.get('/camisetas', produtosController.camisetas);
 
 module.exports = router;
   
